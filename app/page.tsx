@@ -19,7 +19,7 @@ export default async function Home() {
               <h1 className={'lg:text-4xl font-bold tracking-tight text-slate-200 text-2xl'}>Nguyễn Trọng Tuân</h1>
               <h2 className={'mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl'}>Developer</h2>
               <p className='mt-4 max-w-xs leading-normal'>
-                  I'm a passionate web developer focused on delivering innovative solutions that help businesses grow. I have experience with modern web technologies like React, React Native and more.
+                  I&apos;m a passionate web developer focused on delivering innovative solutions that help businesses grow. I have experience with modern web technologies like React, React Native and more.
               </p>
               <NavBar />
           </div>
@@ -30,9 +30,9 @@ export default async function Home() {
                       <div className={'sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0'}>
                           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About</h2>
                       </div>
-                      <p className={'mb-4'}>I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.</p>
-                      <p className={'mb-4'}>Currently, I'm a Senior Front-End Engineer at Ho Chi Minh, specializing in accessibility. I contribute to the creation and maintenance of UI components that power of frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.</p>
-                      <p className={'mb-4'}>In the past, I've had the opportunity to develop software across a variety of settings — from advertising agencies and large corporations to start-ups and small digital product studios. Additionally, I also released a comprehensive video course a few years ago, guiding learners through building a web app</p>
+                      <p className={'mb-4'}>I&apos;m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.</p>
+                      <p className={'mb-4'}>Currently, I&apos;m a Senior Front-End Engineer at Ho Chi Minh, specializing in accessibility. I contribute to the creation and maintenance of UI components that power of frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.</p>
+                      <p className={'mb-4'}>In the past, I&apos;ve had the opportunity to develop software across a variety of settings — from advertising agencies and large corporations to start-ups and small digital product studios. Additionally, I also released a comprehensive video course a few years ago, guiding learners through building a web app</p>
                   </div>
               </Section>
               <Section title={''}>

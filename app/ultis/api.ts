@@ -23,7 +23,10 @@ export async function apiFetch<T>(
 
         const data: T = await response.json();
         return { success: true, data };
-    } catch (error: any) {
-        return { success: false, error: error.message || 'Unknown error occurred' };
+    } catch (error) {
+        if (error instanceof Error) {
+            return { success: false, error: error.message };
+        }
+        return { success: false, error: 'Unknown error occurred' };
     }
 }
