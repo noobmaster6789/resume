@@ -6,10 +6,12 @@ import {TProjectType} from "@/type/project";
 
 type ProjectListProps = {
     projects: TProjectType[];
+    projectDetail: {id: number, detail: string}[]
 };
 
-export default function ProjectList({ projects }: ProjectListProps) {
+export default function ProjectList({ projects, projectDetail = [] }: ProjectListProps) {
     const [expandedProject, setExpandedProject] = useState<string | null>(null);
+    console.log('projectDetail',projectDetail);
 
     const toggleProject = (id: string) => {
         setExpandedProject((prev) => (prev === id ? null : id)); // Toggle project
@@ -36,9 +38,9 @@ export default function ProjectList({ projects }: ProjectListProps) {
                     </p>
                     {expandedProject === idx.toString() && (
                         <ul className="mt-4 list-disc list-inside text-gray-700">
-                            {project.detail.split('.').map((detail, index) => (
-                                <li className={'text-left'} key={index}>{detail}</li>
-                            ))}
+                            {projectDetail.map((de,index) => {
+                                if(de.id.toString() === project.projectId) return <li className={'text-left'} key={index}>{de.detail}</li>
+                            })}
                         </ul>
                     )}
                     <button

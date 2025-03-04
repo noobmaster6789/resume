@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        thinGreen: "#64ffda"
+      },
+      fontFamily: {
+        sans: ['"Helvetica Neue"', "Arial", "sans-serif"],
       },
     },
   },

@@ -14,19 +14,24 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-
+  @apply font-sans;
 }
 /* globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
+  color: rgb(148 163 184/1);
 }
 
 .container {
@@ -34,12 +39,54 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+.bgMain {
+background: rgb(15 23 42 / 1);
+}
+.nav-indicator {
+  @apply mr-4 h-px w-8 bg-slate-600 transition-all duration-300 ease-in-out
+  group-hover:w-16 group-hover:bg-slate-200
+  group-focus-visible:w-16 group-focus-visible:bg-slate-200
+  motion-reduce:transition-none;
+}
+
+.nav-indicator-active {
+  @apply w-16 bg-teal-300;
+}
+
+.new-tab-icon {
+  transition: color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.new-tab-link:hover .new-tab-icon {
+  color: #64ffda;
+  transform: translateX(3px) translateY(-3px);
+}
+.group:hover .new-tab-icon {
+  @apply translate-x-1 -translate-y-1 text-teal-300;
+}
+
+.group:hover .nav-indicator,
+.group:focus-visible .nav-indicator,
+.group:hover .nav-indicator-active,
+.group:focus-visible .nav-indicator-active {
+  @apply w-16 bg-green-400;
+}
+
+
+.project:hover .project-title {
+  @apply text-teal-300
+}
+
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
+}
+
+.mainContent {
+  display: flex;
 }
 
 .logo {
@@ -260,4 +307,14 @@ body {
   .projects-container {
     grid-template-columns: 1fr;
   }
+}
+@media (max-width: 1440px) {
+  .card-project:hover {
+    display: block;
+    padding: 10px;
+    border-radius: 0.25rem;
+    background: rgba(30,41,59,.5);
+    box-shadow:0 0 #000, 0 0 #000,inset 0 1px 0 0 rgba(148, 163, 184, .1)
+  }
+
 }
